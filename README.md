@@ -3,7 +3,7 @@
 ## Project Overview
 A hands-on security lab focused on deploying, securing, and auditing a Linux-based web server. This project simulates a professional hardening workflow, moving from initial service deployment to network-level traffic analysis. This lab served as a practical application of "Purple Team" concepts—combining defensive configuration with offensive verification.
 
-## 🛠 Core Technical Skills
+## Core Technical Skills
 * **System Administration:** Ubuntu 24.04 LTS, Repository management (`apt`), Systemd service control.
 * **Network Security:** Host-based firewalls (UFW), Port management, Protocol analysis.
 * **Defensive Hardening:** Service obfuscation (Banner grabbing mitigation), Nginx security configuration.
