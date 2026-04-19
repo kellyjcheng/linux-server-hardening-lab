@@ -1,0 +1,18 @@
+Security Lab Report: Network Service Discovery and Remediation
+4/8/2026
+Environment: Ubuntu 24.04 LTS (VM)
+Context: First security report on firstubuntuvm
+
+Objective: Simulate an unauthorized network service, detext it, and perform a remediation by terminating it.
+Process:
+1. Identify my IP address by using the command "ip a"
+2. Use command "nmap -sV ___" to identify any open ports
+3. No open ports detected, all 1000 were closed
+4. Open another terminal window and opened a prot using command "nc -lvp 6666" and received a connection
+5. Closed the connection using Ctrl + C
+6. Opened another port using the same command (also port 6666)
+7. Returned to the other terminal window and ran "nmap -sV ___" again
+8. Identified port6666 open
+9. Ran "sudo lsof -i :6666" to identify PID. Returned PID 4886
+10. Ran "kill 4886" to terminate connection"
+11. Followed up with nmap to confirm the port was closed.
