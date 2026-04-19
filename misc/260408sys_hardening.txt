@@ -1,0 +1,27 @@
+System Hardening
+* Reducing Attack Surface
+
+Process 1 - Installation
+1. Tried to install Nginx, Ubuntu kept looking for a physical CD-ROM that didn't exist
+2. Solution: Edited the sources.list and disabled (via commenting with #) the CD-ROM and pointed the sys back to the internet
+3. Unblocked the package manager (apt)
+4. Downloaded the software from Ubuntu repos
+
+Process 2 - Setting up the service
+1. Ran "sudo apt install nginx"
+2. Nginx, a background service was bound to port 80
+3. VM turned into a web server, so when I ran "curl -I localhost" I was looking at my port to see if anything was there
+4. Received a 200 OK response meaning the server was online
+
+Process 3 - Obfuscation
+1. Turned "server_tokens" off
+
+Process 4 - Firewall
+1. Enabled the Uncomplicated Firwall (UFW)
+2. Allowed ssh and http
+3. Implemented a "Default Deny" policy which puts the firewall in front of the op sys.
+4. Precents any traffic that isn't for the ssh (port22) or http (port80)
+
+Process 5: Audit
+1. Ran "nmap -sV localhost"
+2. Observed port80 being open, no version information, other ports are closed.
